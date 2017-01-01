@@ -105,6 +105,7 @@ public class FloatBallView extends LinearLayout {
                         mLastDownTime = System.currentTimeMillis();
                         mLastDownX = event.getX();
                         mLastDownY = event.getY();
+
                         postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -136,7 +137,7 @@ public class FloatBallView extends LinearLayout {
                         if (mIsLongTouch) {
                             mIsLongTouch = false;
                         } else if (isClick(event)) {
-                            AccessibilityUtil.doBack(mService);
+                            AccessibilityUtil.doLeftOrRight(mService);
                         } else {
                             doUp();
                         }
@@ -244,8 +245,10 @@ public class FloatBallView extends LinearLayout {
     private void doUp() {
         switch (mCurrentMode) {
             case MODE_LEFT:
+                AccessibilityUtil.doBack(mService);
+                break;
             case MODE_RIGHT:
-                AccessibilityUtil.doLeftOrRight(mService);
+                AccessibilityUtil.doBack(mService);
                 break;
             case MODE_DOWN:
                 AccessibilityUtil.doPullDown(mService);

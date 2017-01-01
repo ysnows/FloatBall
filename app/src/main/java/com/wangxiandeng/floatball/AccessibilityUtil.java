@@ -10,7 +10,8 @@ import android.provider.Settings;
 
 public class AccessibilityUtil {
     /**
-     * µ¥»÷·µ»Ø¹¦ÄÜ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¹ï¿½ï¿½ï¿½
+     *
      * @param service
      */
     public static void doBack(AccessibilityService service) {
@@ -18,15 +19,17 @@ public class AccessibilityUtil {
     }
 
     /**
-     * ÏÂÀ­´ò¿ªÍ¨ÖªÀ¸
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨Öªï¿½ï¿½
+     *
      * @param service
      */
     public static void doPullDown(AccessibilityService service) {
-        service.performGlobalAction(AccessibilityService.GLOBAL_ACTION_NOTIFICATIONS);
+        service.performGlobalAction(AccessibilityService.GLOBAL_ACTION_QUICK_SETTINGS);
     }
 
     /**
-     * ÉÏÀ­·µ»Ø×ÀÃæ
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     *
      * @param service
      */
     public static void doPullUp(AccessibilityService service) {
@@ -34,7 +37,8 @@ public class AccessibilityUtil {
     }
 
     /**
-     * ×óÓÒ»¬¶¯´ò¿ª¶àÈÎÎñ
+     * ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ò¿ª¶ï¿½ï¿½ï¿½ï¿½ï¿½
+     *
      * @param service
      */
     public static void doLeftOrRight(AccessibilityService service) {
@@ -60,7 +64,6 @@ public class AccessibilityUtil {
 
         return false;
     }
-
 
 
 }
